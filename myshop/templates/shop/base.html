@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}ANCILLA SHOP{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body id="bg" style="background-image:url(' {% static 'img/background4.jpg' %} ');">
+
+<header class="header">
+   <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">ANCILLA</div>
+
+        <nav class="nav">
+             <a class="nav__link" href="{% url 'shop:homepage' %}">HOME</a>
+             <a class="nav__link active" href="{% url 'shop:product_list' %}">SHOP</a>
+             <a class="nav__link" href="{% url 'shop:blogpage' %}">BLOG</a>
+             <a class="nav__link" href="{% url 'shop:contactpage' %}">CONTACT</a>
+        </nav>
+    </div>
+    </div>
+</header>
+<div class="container">
+<div id="subheader">
+    <div class="cart">
+        {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+        In cart:
+        <a href="{% url 'cart:cart_detail' %}">
+            {{ total_items }} pc ,${{ cart.get_total_price }}
+        </a>
+        {% else %}
+        Cart is empty
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
+</div>
+<div id="content">
+{% block content %}{% endblock %}
+</div>
+</body>
+</html>

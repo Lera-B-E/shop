@@ -1,0 +1,6 @@
+<form class="subscribe" action="{% url 'contact' %}" method="post">
+  {% csrf_token %}
+  {{ contact_form }}
+<!--  <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">-->
+  <button class="subscribe__btn" type="submit">Subscribe</button>
+</form>

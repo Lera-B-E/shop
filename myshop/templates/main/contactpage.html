@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load contact_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/stylecontact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5dc06c7d36.js" crossorigin="anonymous"></script>
+    <title>ANCILLA CONTACT</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylecontact.css' %}">
+</head>
+<body>
+    
+    
+<header class="header">
+   <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">ANCILLA</div>
+        
+        <nav class="nav">
+             <a class="nav__link" href="homepage.html">HOME</a>
+             <a class="nav__link" href="http://127.0.0.1:8000/">SHOP</a>
+             <a class="nav__link" href="blogpage.html">BLOG</a>
+             <a class="nav__link active" href="contactpage.html">CONTACT</a>
+        </nav>
+    </div>
+    </div> 
+</header>
+    
+<footer class="footer">
+    <div class="container">
+    
+        <div class="footer__inner">
+            <div class="footer__col footer__col--first">
+                <div class="footer__logo">Contact us</div>
+                <div class="footer__title"><b>Come visit us</b></div>
+                    <div class="footer__text">45 KEARNY ST.</div>
+                    <div class="footer__text"> SAN FRANCISCO, CA </div>
+                    <div class="footer__text">(415)291 - 8697</div>
+                <div class="footer__title"><b>Store hours</b></div>
+                    <div class="footer__text">Monday - Friday 9:00-8:00</div> 
+                    <div class="footer__text">Saturday 10:00-7:00</div>
+                    <div class="footer__text">Sunday 10:00-6:00</div>
+                <div class="footer__title"><b>Phone</b></div>
+                    <div class="footer__text">(415)291 - 8697</div>
+                <div class="footer__social-content">
+                    <b>Follow Us:</b>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+                    {% contact_form %}
+
+            </div>
+            
+            <div class="footer__col footer__col--second">
+               <div class="map">
+                    <h2 class="map__title">
+                        <div><i class="fa-solid fa-location-dot"></i></div>
+                        <a href="https://goo.gl/maps/oi6pkVjwMV8jMjj3A" target="_blank">Open Map</a>
+                    </h2>
+                </div> 
+            </div>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
